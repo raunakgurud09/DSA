@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+	int n;
+	cin>>n;
+	int arr[n];
+	for(int i = 0;i<n;i++){
+		int c;
+		cin>>c;
+		arr[i] = c;
+	}
+
+
+	// precompute
+	int hashArr[13] = {0};
+	for (int i = 0; i < n; i++)
+	{
+		hashArr[arr[i]] +=1;
+	}
+
+
+	int m;
+	cin>>m;
+	for(int i = 0;i< m;i++){
+		int s;
+		cin>>s;
+		cout<<hashArr[s]<<endl;
+	}
+
+
+
+
+	return 0;
+}
