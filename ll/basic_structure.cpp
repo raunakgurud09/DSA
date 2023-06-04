@@ -45,6 +45,9 @@ void insertInPosition(Node* &head,Node* tail,int pos,int data){
 	while(cnt < pos ){
 		temp = temp->next;
 		cnt++;
+		if(temp->next == NULL){
+			break;
+		}
 	}
 
 	if(temp->next == NULL){
@@ -99,7 +102,7 @@ int main(){
 	printLl(head);
 
 
-	insertInPosition(head,tail,6,50);
+	insertInPosition(head,tail,9,50);
 
 	printLl(head);
 
