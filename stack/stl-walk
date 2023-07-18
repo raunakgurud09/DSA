@@ -1,0 +1,22 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+
+
+
+int main(){
+
+	stack<int> s;
+
+	s.push(2);
+	s.push(3);
+
+	s.pop();
+	// s.pop();
+
+
+	cout<<"print top ele: "<<s.size()<<endl;
+	cout<<"is empty: "<<s.empty()<<endl;
+
+	return 0;
+}

@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+
+void insertAtBottom(stack<int> &myStack,int num){
+    stack<int> store;
+
+    while(!myStack.empty()){
+        int num = myStack.top();
+        store.push(num);
+        myStack.pop();
+    }
+
+    myStack.push(num);
+
+    while(!store.empty()){
+        int num = store.top();
+        myStack.push(num);
+        store.pop();
+    }
+
+}
+
+void reverseStack(stack<int> &stack) {
+    // Write your code here
+    if(stack.empty()){
+        return;
+    }
+
+    int num = stack.top();
+    stack.pop();
+    
+    // recurrsion
+    reverseStack(stack);
+
+    insertAtBottom(stack,num);
+}
