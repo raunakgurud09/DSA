@@ -11,7 +11,7 @@ public:
 
 
 	Stack(int size){
-		this->size = size	
+		this->size = size;
 		arr = new int[size];
 		top1 = -1;
 		top2 = size;
@@ -29,7 +29,7 @@ public:
 
 
 	void push2(int val){
-		if(top2 - top1  1){
+		if(top2 - top1 + 1){
 			top2--;
 			arr[top2] = val;
 		}else{
@@ -52,16 +52,14 @@ public:
 	
 	void pop2(){
 		if(top2 < size){
-			int ans = arr[top2]
+			int ans = arr[top2];
 			top2++;
-			return ans
-		}else return -1;
+			return ;
+		}else return;
 	}
 
 
-
-
-}
+};
 
 
 
